@@ -1,0 +1,101 @@
+@import "../../../Theme/variable.scss";
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Shadows+Into+Light&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Slab:wght@800&display=swap");
+@keyframes gradientAnimation {
+  0% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.tagLine {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+  .block {
+    width: max-content;
+    // height: max-content;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    .text {
+      font-size: 8vw;
+      font-weight: 900;
+      transition: 1s ease-in;
+      transform: translateY(100%);
+    }
+    .text[is-appeared="true"] {
+      transform: translateY(0);
+    }
+  }
+  .block {
+    display: flex;
+    overflow-y: hidden;
+    .text {
+      transform: translateY(100%);
+      transition: 1s ease-in-out;
+    }
+    .text[is-appeared="true"] {
+      transform: translateY(0);
+    }
+  }
+  .block:nth-child(3) {
+    height: 70px;
+    .text {
+      transition-delay: 0.6s;
+
+      font-size: 4vw;
+      font-family: cursive;
+    }
+  }
+  .block:nth-child(4) {
+    padding-block: 0.2rem;
+    .text {
+      transition-delay: 0.8s;
+      font-weight: 900;
+      font-size: 9vw;
+    }
+  }
+
+  .block:nth-child(1) {
+    padding-bottom: 1rem;
+    .text {
+      background: linear-gradient(98deg, $PRIMARY-MAIN, $PRIMARY-MAIN-2);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200% 200%;
+      animation: gradientAnimation 8s infinite ease-in;
+    }
+  }
+  .block:nth-child(2) {
+    padding-bottom: 1rem;
+
+    .text {
+      transition-delay: 0.4s;
+      background: linear-gradient(98deg, $PRIMARY-MAIN-2, $PRIMARY-MAIN);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200% 200%;
+      animation: gradientAnimation 8s infinite ease-in;
+    }
+  }
+}
+// @media (max-width: 768px) {
+//   .tagLine {
+//     .text {
+//       // font-size: 1rem;
+//     }
+//   }
+// }

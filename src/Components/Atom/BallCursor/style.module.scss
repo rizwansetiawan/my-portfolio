@@ -1,0 +1,27 @@
+@import "../../../Theme/variable.scss";
+body,
+a {
+  cursor: none;
+}
+.cursorDot {
+  opacity: 0;
+}
+.cursorOutline {
+  width: 10px;
+  height: 10px;
+  background-color: $NEUTRAL-PRIMARY-10;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+}
+.cursorDot,
+.cursorOutline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+.cursor-dot.clicking,
+.cursor-outline.clicking {
+  cursor: pointer;
+}

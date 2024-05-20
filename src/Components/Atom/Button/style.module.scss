@@ -1,0 +1,10 @@
+// Style untuk elemen yang akan muncul saat dalam view
+.wrapper {
+  width: 0; // Nilai awal lebar
+  height: 200px;
+  background-color: salmon;
+  transition: width 1s ease; // Animasi transisi lebar
+}
+.wrapper[is-true="true"] {
+  width: 200px;
+}
